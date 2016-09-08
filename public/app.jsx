@@ -5,20 +5,23 @@ var Greeter = React.createClass({
             message: 'This is the default message'
         };
     },
-    getInitialState: function() {
-      return {
-          name: this.props.name
-      }
+    getInitialState: function () {
+        return {
+            name: this.props.name
+        }
     },
-    onButtonClick: function(e) {
-      e.preventDefault();
+    onButtonClick: function (e) {
+        e.preventDefault();
 
-        var name = this.refs.name.value;
-        this.refs.name.value = '';
+        var nameRef = this.refs.name;
+        var name = nameRef.value;
+        nameRef.value = '';
 
-        this.setState({
-           name: name
-        });
+        if (typeof name === 'string' && name.length > 0) {
+            this.setState({
+                name: name
+            });
+        }
 
     },
     render: function () {
