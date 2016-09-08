@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/PhillyWebGuy/udemy-reactjs-course/issues"
   },
-  "homepage": "https://github.com/PhillyWebGuy/udemy-reactjs-course#readme"
+  "homepage": "https://github.com/PhillyWebGuy/udemy-reactjs-course#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
